@@ -1,0 +1,15 @@
+@"
+venv/
+__pycache__/
+hf_cache/
+surgical_repair_v2/
+surgical_repair_output/
+surgical_repair_merged/
+surgical_repair_v2_merged/
+sandbox_tmp/
+sandbox_eval/
+cocoder_backup/
+*.log
+.env
+Modelfile*
+"@ | Set-Content -Path .gitignore

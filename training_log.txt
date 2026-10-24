@@ -1,0 +1,253 @@
+[2026-09-27 11:05:23] [INFO] [SURGICAL-REPAIR] Tree-sitter Python parser initialized
+[2026-09-27 11:05:23] [INFO] [SURGICAL-REPAIR] Sandbox directory initialized: D:\DIP_lab\cocoder\sandbox_tmp
+[2026-09-27 11:05:23] [INFO] [SURGICAL-REPAIR] ======================================================================
+[2026-09-27 11:05:23] [INFO] [SURGICAL-REPAIR] SURGICAL CODE REPAIR PIPELINE
+[2026-09-27 11:05:23] [INFO] [SURGICAL-REPAIR] ======================================================================
+[2026-09-27 11:05:23] [INFO] [SURGICAL-REPAIR] 
+[STEP 1/5] Loading model with QLoRA...
+[2026-09-27 11:05:23] [INFO] [SURGICAL-REPAIR] Loading model: deepseek-ai/deepseek-coder-1.3b-base
+[2026-09-27 11:05:24] [INFO] [SURGICAL-REPAIR] HTTP Request: HEAD https://huggingface.co/deepseek-ai/deepseek-coder-1.3b-base/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+[2026-09-27 11:05:24] [INFO] [SURGICAL-REPAIR] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/deepseek-ai/deepseek-coder-1.3b-base/c919139c3a9b4070729c8b2cca4847ab29ca8d94/config.json "HTTP/1.1 200 OK"
+[2026-09-27 11:05:24] [INFO] [SURGICAL-REPAIR] HTTP Request: HEAD https://huggingface.co/deepseek-ai/deepseek-coder-1.3b-base/resolve/main/tokenizer_config.json "HTTP/1.1 307 Temporary Redirect"
+[2026-09-27 11:05:24] [INFO] [SURGICAL-REPAIR] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/deepseek-ai/deepseek-coder-1.3b-base/c919139c3a9b4070729c8b2cca4847ab29ca8d94/tokenizer_config.json "HTTP/1.1 200 OK"
+[2026-09-27 11:05:25] [INFO] [SURGICAL-REPAIR] HTTP Request: HEAD https://huggingface.co/deepseek-ai/deepseek-coder-1.3b-base/resolve/main/tokenizer_config.json "HTTP/1.1 307 Temporary Redirect"
+[2026-09-27 11:05:25] [INFO] [SURGICAL-REPAIR] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/deepseek-ai/deepseek-coder-1.3b-base/c919139c3a9b4070729c8b2cca4847ab29ca8d94/tokenizer_config.json "HTTP/1.1 200 OK"
+[2026-09-27 11:05:25] [INFO] [SURGICAL-REPAIR] HTTP Request: GET https://huggingface.co/api/models/deepseek-ai/deepseek-coder-1.3b-base/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"
+[2026-09-27 11:05:25] [INFO] [SURGICAL-REPAIR] HTTP Request: GET https://huggingface.co/api/models/deepseek-ai/deepseek-coder-1.3b-base/tree/main?recursive=true&expand=false "HTTP/1.1 200 OK"
+[2026-09-27 11:05:25] [INFO] [SURGICAL-REPAIR] Loading base model (this may take a few minutes)...
+[2026-09-27 11:05:26] [INFO] [SURGICAL-REPAIR] HTTP Request: HEAD https://huggingface.co/deepseek-ai/deepseek-coder-1.3b-base/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+[2026-09-27 11:05:26] [INFO] [SURGICAL-REPAIR] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/deepseek-ai/deepseek-coder-1.3b-base/c919139c3a9b4070729c8b2cca4847ab29ca8d94/config.json "HTTP/1.1 200 OK"
+[2026-09-27 11:05:26] [INFO] [SURGICAL-REPAIR] HTTP Request: HEAD https://huggingface.co/deepseek-ai/deepseek-coder-1.3b-base/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+[2026-09-27 11:05:26] [INFO] [SURGICAL-REPAIR] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/deepseek-ai/deepseek-coder-1.3b-base/c919139c3a9b4070729c8b2cca4847ab29ca8d94/config.json "HTTP/1.1 200 OK"
+[2026-09-27 11:05:26] [INFO] [SURGICAL-REPAIR] HTTP Request: HEAD https://huggingface.co/deepseek-ai/deepseek-coder-1.3b-base/resolve/main/model.safetensors "HTTP/1.1 404 Not Found"
+[2026-09-27 11:05:26] [INFO] [SURGICAL-REPAIR] HTTP Request: GET https://huggingface.co/api/models/deepseek-ai/deepseek-coder-1.3b-base "HTTP/1.1 200 OK"
+[2026-09-27 11:05:27] [INFO] [SURGICAL-REPAIR] HTTP Request: GET https://huggingface.co/api/models/deepseek-ai/deepseek-coder-1.3b-base/commits/main "HTTP/1.1 200 OK"
+[2026-09-27 11:05:27] [INFO] [SURGICAL-REPAIR] HTTP Request: GET https://huggingface.co/api/models/deepseek-ai/deepseek-coder-1.3b-base/discussions?p=0 "HTTP/1.1 200 OK"
+[2026-09-27 11:05:27] [INFO] [SURGICAL-REPAIR] HTTP Request: GET https://huggingface.co/api/models/deepseek-ai/deepseek-coder-1.3b-base/commits/refs%2Fpr%2F3 "HTTP/1.1 200 OK"
+[2026-09-27 11:05:28] [INFO] [SURGICAL-REPAIR] HTTP Request: HEAD https://huggingface.co/deepseek-ai/deepseek-coder-1.3b-base/resolve/refs%2Fpr%2F3/model.safetensors.index.json "HTTP/1.1 404 Not Found"
+[2026-09-27 11:05:28] [INFO] [SURGICAL-REPAIR] HTTP Request: HEAD https://huggingface.co/deepseek-ai/deepseek-coder-1.3b-base/resolve/refs%2Fpr%2F3/model.safetensors "HTTP/1.1 302 Found"
+[2026-09-27 11:05:36] [INFO] [SURGICAL-REPAIR] HTTP Request: HEAD https://huggingface.co/deepseek-ai/deepseek-coder-1.3b-base/resolve/main/generation_config.json "HTTP/1.1 307 Temporary Redirect"
+[2026-09-27 11:05:36] [INFO] [SURGICAL-REPAIR] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/deepseek-ai/deepseek-coder-1.3b-base/c919139c3a9b4070729c8b2cca4847ab29ca8d94/generation_config.json "HTTP/1.1 200 OK"
+[2026-09-27 11:05:36] [INFO] [SURGICAL-REPAIR] HTTP Request: HEAD https://huggingface.co/deepseek-ai/deepseek-coder-1.3b-base/resolve/main/custom_generate/generate.py "HTTP/1.1 404 Not Found"
+[2026-09-27 11:05:39] [INFO] [SURGICAL-REPAIR] Gradient checkpointing enabled
+[2026-09-27 11:05:39] [INFO] [SURGICAL-REPAIR] Trainable parameters: 3,145,728 (0.2332%)
+[2026-09-27 11:05:39] [INFO] [SURGICAL-REPAIR] Total parameters: 1,348,675,584
+[2026-09-27 11:05:39] [INFO] [SURGICAL-REPAIR] 
+[STEP 2/5] Preparing FIM dataset...
+[2026-09-27 11:05:39] [INFO] [SURGICAL-REPAIR] Loading dataset: code_x_glue_cc_code_refinement/small
+[2026-09-27 11:05:39] [ERROR] [SURGICAL-REPAIR] `trust_remote_code` is not supported anymore.
+Please check that the Hugging Face dataset 'code_x_glue_cc_code_refinement' isn't based on a loading script and remove `trust_remote_code`.
+If the dataset is based on a loading script, please ask the dataset author to remove it and convert it to a standard format like Parquet.
+[2026-09-27 11:05:40] [INFO] [SURGICAL-REPAIR] HTTP Request: HEAD https://huggingface.co/datasets/code_x_glue_cc_code_refinement/resolve/main/README.md "HTTP/1.1 307 Temporary Redirect"
+[2026-09-27 11:05:40] [INFO] [SURGICAL-REPAIR] HTTP Request: HEAD https://huggingface.co/datasets/google/code_x_glue_cc_code_refinement/resolve/main/README.md "HTTP/1.1 307 Temporary Redirect"
+[2026-09-27 11:05:40] [INFO] [SURGICAL-REPAIR] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/datasets/google/code_x_glue_cc_code_refinement/07ab797a018d0d5c448b56eb26b5e11aa5ad7659/README.md "HTTP/1.1 200 OK"
+[2026-09-27 11:05:40] [INFO] [SURGICAL-REPAIR] HTTP Request: HEAD https://huggingface.co/datasets/code_x_glue_cc_code_refinement/resolve/07ab797a018d0d5c448b56eb26b5e11aa5ad7659/code_x_glue_cc_code_refinement.py "HTTP/1.1 307 Temporary Redirect"
+[2026-09-27 11:05:41] [INFO] [SURGICAL-REPAIR] HTTP Request: HEAD https://huggingface.co/datasets/google/code_x_glue_cc_code_refinement/resolve/07ab797a018d0d5c448b56eb26b5e11aa5ad7659/code_x_glue_cc_code_refinement.py "HTTP/1.1 404 Not Found"
+[2026-09-27 11:05:42] [INFO] [SURGICAL-REPAIR] HTTP Request: HEAD https://s3.amazonaws.com/datasets.huggingface.co/datasets/datasets/code_x_glue_cc_code_refinement/code_x_glue_cc_code_refinement.py "HTTP/1.1 404 Not Found"
+[2026-09-27 11:05:42] [WARNING] [SURGICAL-REPAIR] Failed to load CodeXGLUE: Invalid HF URI 'hf://datasets/code_x_glue_cc_code_refinement@07ab797a018d0d5c448b56eb26b5e11aa5ad7659/.huggingface.yaml'. Repository id must be 'namespace/name', got 'code_x_glue_cc_code_refinement'.
+[2026-09-27 11:05:42] [INFO] [SURGICAL-REPAIR] Falling back to synthetic dataset...
+[2026-09-27 11:05:42] [INFO] [SURGICAL-REPAIR] Creating synthetic bug-fix dataset...
+[2026-09-27 11:05:42] [INFO] [SURGICAL-REPAIR] Train samples: 1800, Eval samples: 200
+[2026-09-27 11:05:43] [INFO] [SURGICAL-REPAIR] 
+[STEP 3/5] Configuring training...
+[2026-09-27 11:05:43] [WARNING] [SURGICAL-REPAIR] Dropped unsupported TrainingArguments kwargs for your transformers version: ['evaluation_strategy', 'logging_dir', 'no_cuda', 'overwrite_output_dir']
+[2026-09-27 11:05:43] [INFO] [SURGICAL-REPAIR] Passing 29 kwargs to TrainingArguments
+[2026-09-27 11:05:43] [INFO] [SURGICAL-REPAIR] Training configured: 400 max steps
+[2026-09-27 11:05:43] [INFO] [SURGICAL-REPAIR] Batch size: 1 x 8 grad accum
+[2026-09-27 11:05:43] [INFO] [SURGICAL-REPAIR] 
+[STEP 4/5] Starting training...
+[2026-09-27 11:05:43] [INFO] [SURGICAL-REPAIR] Starting training loop...
+[2026-09-27 11:05:44] [INFO] [SURGICAL-REPAIR] Training started. Time budget: 3.0 hours
+[2026-09-27 11:07:46] [INFO] [SURGICAL-REPAIR] [0.03h] {'loss': 3.89620361328125, 'grad_norm': 4.798323154449463, 'learning_rate': 2.6666666666666667e-05, 'epoch': 0.022222222222222223}
+[2026-09-27 11:09:27] [INFO] [SURGICAL-REPAIR] Step 10: RAM usage = 5.20 GB
+[2026-09-27 11:09:27] [INFO] [SURGICAL-REPAIR] [0.06h] {'loss': 3.764242935180664, 'grad_norm': 2.2385668754577637, 'learning_rate': 6e-05, 'epoch': 0.044444444444444446}
+[2026-09-27 11:10:53] [INFO] [SURGICAL-REPAIR] [0.09h] {'loss': 3.543434906005859, 'grad_norm': 7.274191856384277, 'learning_rate': 9.333333333333334e-05, 'epoch': 0.06666666666666667}
+[2026-09-27 11:12:19] [INFO] [SURGICAL-REPAIR] Step 20: RAM usage = 5.20 GB
+[2026-09-27 11:12:19] [INFO] [SURGICAL-REPAIR] [0.11h] {'loss': 3.018595504760742, 'grad_norm': 2.006836175918579, 'learning_rate': 0.00012666666666666666, 'epoch': 0.08888888888888889}
+[2026-09-27 11:13:57] [INFO] [SURGICAL-REPAIR] [0.14h] {'loss': 2.242219924926758, 'grad_norm': 1.7950888872146606, 'learning_rate': 0.00016, 'epoch': 0.1111111111111111}
+[2026-09-27 11:15:42] [INFO] [SURGICAL-REPAIR] Step 30: RAM usage = 5.20 GB
+[2026-09-27 11:15:42] [INFO] [SURGICAL-REPAIR] [0.17h] {'loss': 1.3720677375793457, 'grad_norm': 7.215839385986328, 'learning_rate': 0.00019333333333333333, 'epoch': 0.13333333333333333}
+[2026-09-27 11:17:24] [INFO] [SURGICAL-REPAIR] [0.19h] {'loss': 0.7628895282745362, 'grad_norm': 1.2979010343551636, 'learning_rate': 0.00019783783783783784, 'epoch': 0.15555555555555556}
+[2026-09-27 11:18:49] [INFO] [SURGICAL-REPAIR] Step 40: RAM usage = 5.18 GB
+[2026-09-27 11:18:49] [INFO] [SURGICAL-REPAIR] [0.22h] {'loss': 0.6133712768554688, 'grad_norm': 0.4251629412174225, 'learning_rate': 0.00019513513513513516, 'epoch': 0.17777777777777778}
+[2026-09-27 11:20:16] [INFO] [SURGICAL-REPAIR] [0.24h] {'loss': 0.5752786159515381, 'grad_norm': 0.3489537537097931, 'learning_rate': 0.00019243243243243245, 'epoch': 0.2}
+[2026-09-27 11:21:43] [INFO] [SURGICAL-REPAIR] Step 50: RAM usage = 5.18 GB
+[2026-09-27 11:21:43] [INFO] [SURGICAL-REPAIR] [0.27h] {'loss': 0.5489235877990722, 'grad_norm': 0.19540341198444366, 'learning_rate': 0.00018972972972972974, 'epoch': 0.2222222222222222}
+[2026-09-27 11:24:17] [INFO] [SURGICAL-REPAIR] [0.31h] {'eval_loss': 0.5514233112335205, 'eval_runtime': 153.7744, 'eval_samples_per_second': 1.301, 'eval_steps_per_second': 1.301, 'epoch': 0.2222222222222222}
+[2026-09-27 11:24:18] [INFO] [SURGICAL-REPAIR] HTTP Request: HEAD https://huggingface.co/deepseek-ai/deepseek-coder-1.3b-base/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+[2026-09-27 11:24:18] [INFO] [SURGICAL-REPAIR] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/deepseek-ai/deepseek-coder-1.3b-base/c919139c3a9b4070729c8b2cca4847ab29ca8d94/config.json "HTTP/1.1 200 OK"
+[2026-09-27 11:24:18] [INFO] [SURGICAL-REPAIR] HTTP Request: HEAD https://huggingface.co/deepseek-ai/deepseek-coder-1.3b-base/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+[2026-09-27 11:24:18] [INFO] [SURGICAL-REPAIR] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/deepseek-ai/deepseek-coder-1.3b-base/c919139c3a9b4070729c8b2cca4847ab29ca8d94/config.json "HTTP/1.1 200 OK"
+[2026-09-27 11:26:08] [INFO] [SURGICAL-REPAIR] [0.34h] {'loss': 0.5390405178070068, 'grad_norm': 0.296865850687027, 'learning_rate': 0.00018702702702702703, 'epoch': 0.24444444444444444}
+[2026-09-27 11:27:54] [INFO] [SURGICAL-REPAIR] Step 60: RAM usage = 5.42 GB
+[2026-09-27 11:27:54] [INFO] [SURGICAL-REPAIR] [0.37h] {'loss': 0.5199426651000977, 'grad_norm': 0.21582971513271332, 'learning_rate': 0.00018432432432432435, 'epoch': 0.26666666666666666}
+[2026-09-27 11:29:42] [INFO] [SURGICAL-REPAIR] [0.40h] {'loss': 0.5050741195678711, 'grad_norm': 0.23091478645801544, 'learning_rate': 0.00018162162162162164, 'epoch': 0.28888888888888886}
+[2026-09-27 11:31:30] [INFO] [SURGICAL-REPAIR] Step 70: RAM usage = 5.42 GB
+[2026-09-27 11:31:30] [INFO] [SURGICAL-REPAIR] [0.43h] {'loss': 0.49740309715270997, 'grad_norm': 0.15561650693416595, 'learning_rate': 0.00017891891891891893, 'epoch': 0.3111111111111111}
+[2026-09-27 11:33:19] [INFO] [SURGICAL-REPAIR] [0.46h] {'loss': 0.4826223373413086, 'grad_norm': 0.18527954816818237, 'learning_rate': 0.00017621621621621622, 'epoch': 0.3333333333333333}
+[2026-09-27 11:35:05] [INFO] [SURGICAL-REPAIR] Step 80: RAM usage = 5.42 GB
+[2026-09-27 11:35:05] [INFO] [SURGICAL-REPAIR] [0.49h] {'loss': 0.47796125411987306, 'grad_norm': 0.37378060817718506, 'learning_rate': 0.00017351351351351353, 'epoch': 0.35555555555555557}
+[2026-09-27 11:36:51] [INFO] [SURGICAL-REPAIR] [0.52h] {'loss': 0.4591888427734375, 'grad_norm': 0.14620837569236755, 'learning_rate': 0.00017081081081081083, 'epoch': 0.37777777777777777}
+[2026-09-27 11:38:38] [INFO] [SURGICAL-REPAIR] Step 90: RAM usage = 5.16 GB
+[2026-09-27 11:38:38] [INFO] [SURGICAL-REPAIR] [0.55h] {'loss': 0.45052504539489746, 'grad_norm': 0.1365964412689209, 'learning_rate': 0.00016810810810810812, 'epoch': 0.4}
+[2026-09-27 11:40:23] [INFO] [SURGICAL-REPAIR] [0.58h] {'loss': 0.4472538471221924, 'grad_norm': 0.13050180673599243, 'learning_rate': 0.0001654054054054054, 'epoch': 0.4222222222222222}
+[2026-09-27 11:42:10] [INFO] [SURGICAL-REPAIR] Step 100: RAM usage = 5.17 GB
+[2026-09-27 11:42:10] [INFO] [SURGICAL-REPAIR] [0.61h] {'loss': 0.4358478546142578, 'grad_norm': 0.19186322391033173, 'learning_rate': 0.00016270270270270272, 'epoch': 0.4444444444444444}
+[2026-09-27 11:45:12] [INFO] [SURGICAL-REPAIR] [0.66h] {'eval_loss': 0.43970420956611633, 'eval_runtime': 182.0432, 'eval_samples_per_second': 1.099, 'eval_steps_per_second': 1.099, 'epoch': 0.4444444444444444}
+[2026-09-27 11:45:12] [INFO] [SURGICAL-REPAIR] HTTP Request: HEAD https://huggingface.co/deepseek-ai/deepseek-coder-1.3b-base/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+[2026-09-27 11:45:12] [INFO] [SURGICAL-REPAIR] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/deepseek-ai/deepseek-coder-1.3b-base/c919139c3a9b4070729c8b2cca4847ab29ca8d94/config.json "HTTP/1.1 200 OK"
+[2026-09-27 11:45:12] [INFO] [SURGICAL-REPAIR] HTTP Request: HEAD https://huggingface.co/deepseek-ai/deepseek-coder-1.3b-base/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+[2026-09-27 11:45:12] [INFO] [SURGICAL-REPAIR] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/deepseek-ai/deepseek-coder-1.3b-base/c919139c3a9b4070729c8b2cca4847ab29ca8d94/config.json "HTTP/1.1 200 OK"
+[2026-09-27 11:47:03] [INFO] [SURGICAL-REPAIR] [0.69h] {'loss': 0.42707505226135256, 'grad_norm': 0.1652473658323288, 'learning_rate': 0.00016, 'epoch': 0.4666666666666667}
+[2026-09-27 11:48:49] [INFO] [SURGICAL-REPAIR] Step 110: RAM usage = 5.41 GB
+[2026-09-27 11:48:49] [INFO] [SURGICAL-REPAIR] [0.72h] {'loss': 0.4208502769470215, 'grad_norm': 0.09481771290302277, 'learning_rate': 0.0001572972972972973, 'epoch': 0.4888888888888889}
+[2026-09-27 11:51:07] [INFO] [SURGICAL-REPAIR] [0.76h] {'loss': 0.40727620124816893, 'grad_norm': 0.13916954398155212, 'learning_rate': 0.0001545945945945946, 'epoch': 0.5111111111111111}
+[2026-09-27 11:53:29] [INFO] [SURGICAL-REPAIR] Step 120: RAM usage = 5.42 GB
+[2026-09-27 11:53:29] [INFO] [SURGICAL-REPAIR] [0.80h] {'loss': 0.4044671535491943, 'grad_norm': 0.1532825380563736, 'learning_rate': 0.0001518918918918919, 'epoch': 0.5333333333333333}
+[2026-09-27 11:55:28] [INFO] [SURGICAL-REPAIR] [0.83h] {'loss': 0.3904890060424805, 'grad_norm': 0.08908689767122269, 'learning_rate': 0.0001491891891891892, 'epoch': 0.5555555555555556}
+[2026-09-27 11:57:19] [INFO] [SURGICAL-REPAIR] Step 130: RAM usage = 5.23 GB
+[2026-09-27 11:57:19] [INFO] [SURGICAL-REPAIR] [0.86h] {'loss': 0.3885775566101074, 'grad_norm': 0.09480105340480804, 'learning_rate': 0.0001464864864864865, 'epoch': 0.5777777777777777}
+[2026-09-27 11:59:16] [INFO] [SURGICAL-REPAIR] [0.89h] {'loss': 0.38009512424468994, 'grad_norm': 0.2248581349849701, 'learning_rate': 0.00014378378378378378, 'epoch': 0.6}
+[2026-09-27 12:01:06] [INFO] [SURGICAL-REPAIR] Step 140: RAM usage = 5.16 GB
+[2026-09-27 12:01:06] [INFO] [SURGICAL-REPAIR] [0.92h] {'loss': 0.378844165802002, 'grad_norm': 0.13661202788352966, 'learning_rate': 0.0001410810810810811, 'epoch': 0.6222222222222222}
+[2026-09-27 12:02:54] [INFO] [SURGICAL-REPAIR] [0.95h] {'loss': 0.38027961254119874, 'grad_norm': 0.09986165165901184, 'learning_rate': 0.0001383783783783784, 'epoch': 0.6444444444444445}
+[2026-09-27 12:04:42] [INFO] [SURGICAL-REPAIR] Step 150: RAM usage = 5.15 GB
+[2026-09-27 12:04:42] [INFO] [SURGICAL-REPAIR] [0.98h] {'loss': 0.36868293285369874, 'grad_norm': 0.06653572618961334, 'learning_rate': 0.00013567567567567568, 'epoch': 0.6666666666666666}
+[2026-09-27 12:07:47] [INFO] [SURGICAL-REPAIR] [1.03h] {'eval_loss': 0.3851605951786041, 'eval_runtime': 185.18, 'eval_samples_per_second': 1.08, 'eval_steps_per_second': 1.08, 'epoch': 0.6666666666666666}
+[2026-09-27 12:07:48] [INFO] [SURGICAL-REPAIR] HTTP Request: HEAD https://huggingface.co/deepseek-ai/deepseek-coder-1.3b-base/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+[2026-09-27 12:07:48] [INFO] [SURGICAL-REPAIR] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/deepseek-ai/deepseek-coder-1.3b-base/c919139c3a9b4070729c8b2cca4847ab29ca8d94/config.json "HTTP/1.1 200 OK"
+[2026-09-27 12:07:48] [INFO] [SURGICAL-REPAIR] HTTP Request: HEAD https://huggingface.co/deepseek-ai/deepseek-coder-1.3b-base/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+[2026-09-27 12:07:48] [INFO] [SURGICAL-REPAIR] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/deepseek-ai/deepseek-coder-1.3b-base/c919139c3a9b4070729c8b2cca4847ab29ca8d94/config.json "HTTP/1.1 200 OK"
+[2026-09-27 12:09:41] [INFO] [SURGICAL-REPAIR] [1.07h] {'loss': 0.37176644802093506, 'grad_norm': 0.0770627036690712, 'learning_rate': 0.00013297297297297297, 'epoch': 0.6888888888888889}
+[2026-09-27 12:11:29] [INFO] [SURGICAL-REPAIR] Step 160: RAM usage = 5.41 GB
+[2026-09-27 12:11:29] [INFO] [SURGICAL-REPAIR] [1.10h] {'loss': 0.3690655708312988, 'grad_norm': 0.08073419332504272, 'learning_rate': 0.0001302702702702703, 'epoch': 0.7111111111111111}
+[2026-09-27 12:13:16] [INFO] [SURGICAL-REPAIR] [1.13h] {'loss': 0.36695241928100586, 'grad_norm': 0.508631706237793, 'learning_rate': 0.00012756756756756758, 'epoch': 0.7333333333333333}
+[2026-09-27 12:15:04] [INFO] [SURGICAL-REPAIR] Step 170: RAM usage = 5.42 GB
+[2026-09-27 12:15:04] [INFO] [SURGICAL-REPAIR] [1.16h] {'loss': 0.36934332847595214, 'grad_norm': 0.1395687460899353, 'learning_rate': 0.00012486486486486487, 'epoch': 0.7555555555555555}
+[2026-09-27 12:16:51] [INFO] [SURGICAL-REPAIR] [1.19h] {'loss': 0.35931589603424074, 'grad_norm': 0.0973874181509018, 'learning_rate': 0.00012216216216216216, 'epoch': 0.7777777777777778}
+[2026-09-27 12:18:39] [INFO] [SURGICAL-REPAIR] Step 180: RAM usage = 5.42 GB
+[2026-09-27 12:18:39] [INFO] [SURGICAL-REPAIR] [1.22h] {'loss': 0.3541924715042114, 'grad_norm': 0.11296076327562332, 'learning_rate': 0.00011945945945945946, 'epoch': 0.8}
+[2026-09-27 12:20:11] [INFO] [SURGICAL-REPAIR] [1.24h] {'loss': 0.3557734489440918, 'grad_norm': 0.10075508803129196, 'learning_rate': 0.00011675675675675676, 'epoch': 0.8222222222222222}
+[2026-09-27 12:21:38] [INFO] [SURGICAL-REPAIR] Step 190: RAM usage = 5.41 GB
+[2026-09-27 12:21:38] [INFO] [SURGICAL-REPAIR] [1.27h] {'loss': 0.3596698045730591, 'grad_norm': 0.14211949706077576, 'learning_rate': 0.00011405405405405406, 'epoch': 0.8444444444444444}
+[2026-09-27 12:23:05] [INFO] [SURGICAL-REPAIR] [1.29h] {'loss': 0.35354859828948976, 'grad_norm': 0.1210874691605568, 'learning_rate': 0.00011135135135135135, 'epoch': 0.8666666666666667}
+[2026-09-27 12:24:38] [INFO] [SURGICAL-REPAIR] Step 200: RAM usage = 5.41 GB
+[2026-09-27 12:24:38] [INFO] [SURGICAL-REPAIR] [1.31h] {'loss': 0.3474303960800171, 'grad_norm': 0.06864922493696213, 'learning_rate': 0.00010864864864864865, 'epoch': 0.8888888888888888}
+[2026-09-27 12:27:12] [INFO] [SURGICAL-REPAIR] [1.36h] {'eval_loss': 0.3675571084022522, 'eval_runtime': 154.1076, 'eval_samples_per_second': 1.298, 'eval_steps_per_second': 1.298, 'epoch': 0.8888888888888888}
+[2026-09-27 12:27:12] [INFO] [SURGICAL-REPAIR] HTTP Request: HEAD https://huggingface.co/deepseek-ai/deepseek-coder-1.3b-base/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+[2026-09-27 12:27:12] [INFO] [SURGICAL-REPAIR] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/deepseek-ai/deepseek-coder-1.3b-base/c919139c3a9b4070729c8b2cca4847ab29ca8d94/config.json "HTTP/1.1 200 OK"
+[2026-09-27 12:27:12] [INFO] [SURGICAL-REPAIR] HTTP Request: HEAD https://huggingface.co/deepseek-ai/deepseek-coder-1.3b-base/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+[2026-09-27 12:27:12] [INFO] [SURGICAL-REPAIR] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/deepseek-ai/deepseek-coder-1.3b-base/c919139c3a9b4070729c8b2cca4847ab29ca8d94/config.json "HTTP/1.1 200 OK"
+[2026-09-27 12:28:55] [INFO] [SURGICAL-REPAIR] [1.39h] {'loss': 0.3504624843597412, 'grad_norm': 0.09749837964773178, 'learning_rate': 0.00010594594594594595, 'epoch': 0.9111111111111111}
+[2026-09-27 12:30:42] [INFO] [SURGICAL-REPAIR] Step 210: RAM usage = 5.42 GB
+[2026-09-27 12:30:42] [INFO] [SURGICAL-REPAIR] [1.42h] {'loss': 0.35687081813812255, 'grad_norm': 0.09193727374076843, 'learning_rate': 0.00010324324324324324, 'epoch': 0.9333333333333333}
+[2026-09-27 12:32:29] [INFO] [SURGICAL-REPAIR] [1.45h] {'loss': 0.3496580123901367, 'grad_norm': 0.09730112552642822, 'learning_rate': 0.00010054054054054053, 'epoch': 0.9555555555555556}
+[2026-09-27 12:34:16] [INFO] [SURGICAL-REPAIR] Step 220: RAM usage = 5.42 GB
+[2026-09-27 12:34:16] [INFO] [SURGICAL-REPAIR] [1.48h] {'loss': 0.35070888996124266, 'grad_norm': 0.09965799748897552, 'learning_rate': 9.783783783783784e-05, 'epoch': 0.9777777777777777}
+[2026-09-27 12:36:02] [INFO] [SURGICAL-REPAIR] [1.51h] {'loss': 0.35473220348358153, 'grad_norm': 0.10487821698188782, 'learning_rate': 9.513513513513514e-05, 'epoch': 1.0}
+[2026-09-27 12:37:49] [INFO] [SURGICAL-REPAIR] Step 230: RAM usage = 5.42 GB
+[2026-09-27 12:37:49] [INFO] [SURGICAL-REPAIR] [1.53h] {'loss': 0.34602952003479004, 'grad_norm': 0.07076387852430344, 'learning_rate': 9.243243243243243e-05, 'epoch': 1.0222222222222221}
+[2026-09-27 12:39:36] [INFO] [SURGICAL-REPAIR] [1.56h] {'loss': 0.3480043411254883, 'grad_norm': 0.08060754835605621, 'learning_rate': 8.972972972972973e-05, 'epoch': 1.0444444444444445}
+[2026-09-27 12:41:24] [INFO] [SURGICAL-REPAIR] Step 240: RAM usage = 5.42 GB
+[2026-09-27 12:41:24] [INFO] [SURGICAL-REPAIR] [1.59h] {'loss': 0.3411097526550293, 'grad_norm': 0.09357544779777527, 'learning_rate': 8.702702702702702e-05, 'epoch': 1.0666666666666667}
+[2026-09-27 12:43:13] [INFO] [SURGICAL-REPAIR] [1.62h] {'loss': 0.3452333688735962, 'grad_norm': 0.05241461843252182, 'learning_rate': 8.432432432432433e-05, 'epoch': 1.0888888888888888}
+[2026-09-27 12:45:09] [INFO] [SURGICAL-REPAIR] Step 250: RAM usage = 5.29 GB
+[2026-09-27 12:45:09] [INFO] [SURGICAL-REPAIR] [1.66h] {'loss': 0.34405925273895266, 'grad_norm': 0.061767399311065674, 'learning_rate': 8.162162162162162e-05, 'epoch': 1.1111111111111112}
+[2026-09-27 12:48:21] [INFO] [SURGICAL-REPAIR] [1.71h] {'eval_loss': 0.3831597864627838, 'eval_runtime': 192.2853, 'eval_samples_per_second': 1.04, 'eval_steps_per_second': 1.04, 'epoch': 1.1111111111111112}
+[2026-09-27 12:48:21] [INFO] [SURGICAL-REPAIR] HTTP Request: HEAD https://huggingface.co/deepseek-ai/deepseek-coder-1.3b-base/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+[2026-09-27 12:48:21] [INFO] [SURGICAL-REPAIR] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/deepseek-ai/deepseek-coder-1.3b-base/c919139c3a9b4070729c8b2cca4847ab29ca8d94/config.json "HTTP/1.1 200 OK"
+[2026-09-27 12:48:22] [INFO] [SURGICAL-REPAIR] HTTP Request: HEAD https://huggingface.co/deepseek-ai/deepseek-coder-1.3b-base/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+[2026-09-27 12:48:22] [INFO] [SURGICAL-REPAIR] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/deepseek-ai/deepseek-coder-1.3b-base/c919139c3a9b4070729c8b2cca4847ab29ca8d94/config.json "HTTP/1.1 200 OK"
+[2026-09-27 12:50:17] [INFO] [SURGICAL-REPAIR] [1.74h] {'loss': 0.34273931980133054, 'grad_norm': 0.057786665856838226, 'learning_rate': 7.891891891891892e-05, 'epoch': 1.1333333333333333}
+[2026-09-27 12:52:07] [INFO] [SURGICAL-REPAIR] Step 260: RAM usage = 5.42 GB
+[2026-09-27 12:52:07] [INFO] [SURGICAL-REPAIR] [1.77h] {'loss': 0.3473482131958008, 'grad_norm': 0.08422503620386124, 'learning_rate': 7.621621621621621e-05, 'epoch': 1.1555555555555554}
+[2026-09-27 12:53:58] [INFO] [SURGICAL-REPAIR] [1.80h] {'loss': 0.34676060676574705, 'grad_norm': 0.0656525120139122, 'learning_rate': 7.351351351351352e-05, 'epoch': 1.1777777777777778}
+[2026-09-27 12:55:47] [INFO] [SURGICAL-REPAIR] Step 270: RAM usage = 5.43 GB
+[2026-09-27 12:55:47] [INFO] [SURGICAL-REPAIR] [1.83h] {'loss': 0.34648990631103516, 'grad_norm': 0.08144021779298782, 'learning_rate': 7.081081081081081e-05, 'epoch': 1.2}
+[2026-09-27 12:57:17] [INFO] [SURGICAL-REPAIR] [1.86h] {'loss': 0.34436602592468263, 'grad_norm': 0.08187034726142883, 'learning_rate': 6.810810810810811e-05, 'epoch': 1.2222222222222223}
+[2026-09-27 12:58:45] [INFO] [SURGICAL-REPAIR] Step 280: RAM usage = 5.42 GB
+[2026-09-27 12:58:45] [INFO] [SURGICAL-REPAIR] [1.88h] {'loss': 0.34535048007965086, 'grad_norm': 0.053264208137989044, 'learning_rate': 6.54054054054054e-05, 'epoch': 1.2444444444444445}
+[2026-09-27 13:00:19] [INFO] [SURGICAL-REPAIR] [1.91h] {'loss': 0.3440446376800537, 'grad_norm': 0.0709933340549469, 'learning_rate': 6.27027027027027e-05, 'epoch': 1.2666666666666666}
+[2026-09-27 13:02:06] [INFO] [SURGICAL-REPAIR] Step 290: RAM usage = 5.42 GB
+[2026-09-27 13:02:06] [INFO] [SURGICAL-REPAIR] [1.94h] {'loss': 0.3407017230987549, 'grad_norm': 0.04730180650949478, 'learning_rate': 6e-05, 'epoch': 1.2888888888888888}
+[2026-09-27 13:03:52] [INFO] [SURGICAL-REPAIR] [1.97h] {'loss': 0.34249937534332275, 'grad_norm': 0.05403219163417816, 'learning_rate': 5.7297297297297305e-05, 'epoch': 1.3111111111111111}
+[2026-09-27 13:05:38] [INFO] [SURGICAL-REPAIR] Step 300: RAM usage = 5.17 GB
+[2026-09-27 13:05:38] [INFO] [SURGICAL-REPAIR] [2.00h] {'loss': 0.34176957607269287, 'grad_norm': 0.08705786615610123, 'learning_rate': 5.4594594594594595e-05, 'epoch': 1.3333333333333333}
+[2026-09-27 13:08:41] [INFO] [SURGICAL-REPAIR] [2.05h] {'eval_loss': 0.3908931612968445, 'eval_runtime': 182.8194, 'eval_samples_per_second': 1.094, 'eval_steps_per_second': 1.094, 'epoch': 1.3333333333333333}
+[2026-09-27 13:08:42] [INFO] [SURGICAL-REPAIR] HTTP Request: HEAD https://huggingface.co/deepseek-ai/deepseek-coder-1.3b-base/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+[2026-09-27 13:08:42] [INFO] [SURGICAL-REPAIR] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/deepseek-ai/deepseek-coder-1.3b-base/c919139c3a9b4070729c8b2cca4847ab29ca8d94/config.json "HTTP/1.1 200 OK"
+[2026-09-27 13:08:42] [INFO] [SURGICAL-REPAIR] HTTP Request: HEAD https://huggingface.co/deepseek-ai/deepseek-coder-1.3b-base/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+[2026-09-27 13:08:42] [INFO] [SURGICAL-REPAIR] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/deepseek-ai/deepseek-coder-1.3b-base/c919139c3a9b4070729c8b2cca4847ab29ca8d94/config.json "HTTP/1.1 200 OK"
+[2026-09-27 13:10:36] [INFO] [SURGICAL-REPAIR] [2.08h] {'loss': 0.35043222904205323, 'grad_norm': 0.20890365540981293, 'learning_rate': 5.18918918918919e-05, 'epoch': 1.3555555555555556}
+[2026-09-27 13:12:23] [INFO] [SURGICAL-REPAIR] Step 310: RAM usage = 5.43 GB
+[2026-09-27 13:12:23] [INFO] [SURGICAL-REPAIR] [2.11h] {'loss': 0.3478574752807617, 'grad_norm': 0.1434694081544876, 'learning_rate': 4.9189189189189196e-05, 'epoch': 1.3777777777777778}
+[2026-09-27 13:14:11] [INFO] [SURGICAL-REPAIR] [2.14h] {'loss': 0.34586002826690676, 'grad_norm': 0.08312614262104034, 'learning_rate': 4.648648648648649e-05, 'epoch': 1.4}
+[2026-09-27 13:15:59] [INFO] [SURGICAL-REPAIR] Step 320: RAM usage = 5.42 GB
+[2026-09-27 13:15:59] [INFO] [SURGICAL-REPAIR] [2.17h] {'loss': 0.3391942024230957, 'grad_norm': 0.07256267964839935, 'learning_rate': 4.378378378378379e-05, 'epoch': 1.4222222222222223}
+[2026-09-27 13:17:48] [INFO] [SURGICAL-REPAIR] [2.20h] {'loss': 0.34265053272247314, 'grad_norm': 0.16530142724514008, 'learning_rate': 4.108108108108109e-05, 'epoch': 1.4444444444444444}
+[2026-09-27 13:19:36] [INFO] [SURGICAL-REPAIR] Step 330: RAM usage = 5.41 GB
+[2026-09-27 13:19:36] [INFO] [SURGICAL-REPAIR] [2.23h] {'loss': 0.33525083065032957, 'grad_norm': 0.04954828694462776, 'learning_rate': 3.8378378378378384e-05, 'epoch': 1.4666666666666668}
+[2026-09-27 13:21:24] [INFO] [SURGICAL-REPAIR] [2.26h] {'loss': 0.34594049453735354, 'grad_norm': 0.10716286301612854, 'learning_rate': 3.567567567567568e-05, 'epoch': 1.488888888888889}
+[2026-09-27 13:23:12] [INFO] [SURGICAL-REPAIR] Step 340: RAM usage = 5.17 GB
+[2026-09-27 13:23:12] [INFO] [SURGICAL-REPAIR] [2.29h] {'loss': 0.34070730209350586, 'grad_norm': 0.14897777140140533, 'learning_rate': 3.297297297297298e-05, 'epoch': 1.511111111111111}
+[2026-09-27 13:25:00] [INFO] [SURGICAL-REPAIR] [2.32h] {'loss': 0.33782172203063965, 'grad_norm': 0.06196494400501251, 'learning_rate': 3.0270270270270272e-05, 'epoch': 1.5333333333333332}
+[2026-09-27 13:26:49] [INFO] [SURGICAL-REPAIR] Step 350: RAM usage = 5.17 GB
+[2026-09-27 13:26:49] [INFO] [SURGICAL-REPAIR] [2.35h] {'loss': 0.3430156707763672, 'grad_norm': 0.07999173551797867, 'learning_rate': 2.7567567567567572e-05, 'epoch': 1.5555555555555556}
+[2026-09-27 13:29:55] [INFO] [SURGICAL-REPAIR] [2.40h] {'eval_loss': 0.37109947204589844, 'eval_runtime': 185.7831, 'eval_samples_per_second': 1.077, 'eval_steps_per_second': 1.077, 'epoch': 1.5555555555555556}
+[2026-09-27 13:29:55] [INFO] [SURGICAL-REPAIR] HTTP Request: HEAD https://huggingface.co/deepseek-ai/deepseek-coder-1.3b-base/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+[2026-09-27 13:29:55] [INFO] [SURGICAL-REPAIR] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/deepseek-ai/deepseek-coder-1.3b-base/c919139c3a9b4070729c8b2cca4847ab29ca8d94/config.json "HTTP/1.1 200 OK"
+[2026-09-27 13:29:55] [INFO] [SURGICAL-REPAIR] HTTP Request: HEAD https://huggingface.co/deepseek-ai/deepseek-coder-1.3b-base/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+[2026-09-27 13:29:55] [INFO] [SURGICAL-REPAIR] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/deepseek-ai/deepseek-coder-1.3b-base/c919139c3a9b4070729c8b2cca4847ab29ca8d94/config.json "HTTP/1.1 200 OK"
+[2026-09-27 13:31:45] [INFO] [SURGICAL-REPAIR] [2.43h] {'loss': 0.34108948707580566, 'grad_norm': 0.04715142026543617, 'learning_rate': 2.486486486486487e-05, 'epoch': 1.5777777777777777}
+[2026-09-27 13:33:13] [INFO] [SURGICAL-REPAIR] Step 360: RAM usage = 5.42 GB
+[2026-09-27 13:33:13] [INFO] [SURGICAL-REPAIR] [2.46h] {'loss': 0.35285952091217043, 'grad_norm': 0.08796527981758118, 'learning_rate': 2.2162162162162166e-05, 'epoch': 1.6}
+[2026-09-27 13:34:44] [INFO] [SURGICAL-REPAIR] [2.48h] {'loss': 0.3429359197616577, 'grad_norm': 0.06924667954444885, 'learning_rate': 1.9459459459459463e-05, 'epoch': 1.6222222222222222}
+[2026-09-27 13:36:23] [INFO] [SURGICAL-REPAIR] Step 370: RAM usage = 5.42 GB
+[2026-09-27 13:36:23] [INFO] [SURGICAL-REPAIR] [2.51h] {'loss': 0.33639509677886964, 'grad_norm': 0.09082921594381332, 'learning_rate': 1.675675675675676e-05, 'epoch': 1.6444444444444444}
+[2026-09-27 13:38:12] [INFO] [SURGICAL-REPAIR] [2.54h] {'loss': 0.33931427001953124, 'grad_norm': 0.05562351271510124, 'learning_rate': 1.4054054054054055e-05, 'epoch': 1.6666666666666665}
+[2026-09-27 13:40:01] [INFO] [SURGICAL-REPAIR] Step 380: RAM usage = 5.16 GB
+[2026-09-27 13:40:01] [INFO] [SURGICAL-REPAIR] [2.57h] {'loss': 0.33941657543182374, 'grad_norm': 0.085808165371418, 'learning_rate': 1.1351351351351352e-05, 'epoch': 1.6888888888888889}
+[2026-09-27 13:41:37] [INFO] [SURGICAL-REPAIR] [2.60h] {'loss': 0.3461763858795166, 'grad_norm': 0.0743526816368103, 'learning_rate': 8.64864864864865e-06, 'epoch': 1.7111111111111112}
+[2026-09-27 13:43:05] [INFO] [SURGICAL-REPAIR] Step 390: RAM usage = 5.17 GB
+[2026-09-27 13:43:05] [INFO] [SURGICAL-REPAIR] [2.62h] {'loss': 0.3397723913192749, 'grad_norm': 0.08805583417415619, 'learning_rate': 5.945945945945946e-06, 'epoch': 1.7333333333333334}
+[2026-09-27 13:44:33] [INFO] [SURGICAL-REPAIR] [2.65h] {'loss': 0.3386119604110718, 'grad_norm': 0.06070452928543091, 'learning_rate': 3.2432432432432437e-06, 'epoch': 1.7555555555555555}
+[2026-09-27 13:46:05] [INFO] [SURGICAL-REPAIR] Step 400: RAM usage = 5.16 GB
+[2026-09-27 13:46:05] [INFO] [SURGICAL-REPAIR] [2.67h] {'loss': 0.3421921968460083, 'grad_norm': 0.04851149767637253, 'learning_rate': 5.405405405405406e-07, 'epoch': 1.7777777777777777}
+[2026-09-27 13:48:36] [INFO] [SURGICAL-REPAIR] [2.71h] {'eval_loss': 0.37659892439842224, 'eval_runtime': 150.7714, 'eval_samples_per_second': 1.327, 'eval_steps_per_second': 1.327, 'epoch': 1.7777777777777777}
+[2026-09-27 13:48:36] [INFO] [SURGICAL-REPAIR] HTTP Request: HEAD https://huggingface.co/deepseek-ai/deepseek-coder-1.3b-base/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+[2026-09-27 13:48:36] [INFO] [SURGICAL-REPAIR] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/deepseek-ai/deepseek-coder-1.3b-base/c919139c3a9b4070729c8b2cca4847ab29ca8d94/config.json "HTTP/1.1 200 OK"
+[2026-09-27 13:48:36] [INFO] [SURGICAL-REPAIR] HTTP Request: HEAD https://huggingface.co/deepseek-ai/deepseek-coder-1.3b-base/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+[2026-09-27 13:48:36] [INFO] [SURGICAL-REPAIR] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/deepseek-ai/deepseek-coder-1.3b-base/c919139c3a9b4070729c8b2cca4847ab29ca8d94/config.json "HTTP/1.1 200 OK"
+[2026-09-27 13:48:41] [INFO] [SURGICAL-REPAIR] [2.72h] {'train_runtime': 9776.3682, 'train_samples_per_second': 0.327, 'train_steps_per_second': 0.041, 'total_flos': 974016499384320.0, 'train_loss': 0.5810276934504509, 'epoch': 1.7777777777777777}
+[2026-09-27 13:48:41] [INFO] [SURGICAL-REPAIR] HTTP Request: HEAD https://huggingface.co/deepseek-ai/deepseek-coder-1.3b-base/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+[2026-09-27 13:48:41] [INFO] [SURGICAL-REPAIR] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/deepseek-ai/deepseek-coder-1.3b-base/c919139c3a9b4070729c8b2cca4847ab29ca8d94/config.json "HTTP/1.1 200 OK"
+[2026-09-27 13:48:41] [INFO] [SURGICAL-REPAIR] HTTP Request: HEAD https://huggingface.co/deepseek-ai/deepseek-coder-1.3b-base/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+[2026-09-27 13:48:41] [INFO] [SURGICAL-REPAIR] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/deepseek-ai/deepseek-coder-1.3b-base/c919139c3a9b4070729c8b2cca4847ab29ca8d94/config.json "HTTP/1.1 200 OK"
+[2026-09-27 13:48:45] [INFO] [SURGICAL-REPAIR] Training metrics: {'train_runtime': 9776.3682, 'train_samples_per_second': 0.327, 'train_steps_per_second': 0.041, 'total_flos': 974016499384320.0, 'train_loss': 0.5810276934504509, 'epoch': 1.7777777777777777}
+[2026-09-27 13:48:45] [INFO] [SURGICAL-REPAIR] 
+[STEP 5/5] Running validation pipeline...
+[2026-09-27 13:48:45] [INFO] [SURGICAL-REPAIR] Running validation pipeline on sample test cases...
+[2026-09-27 13:48:45] [INFO] [SURGICAL-REPAIR] 
+Test case 1/3
+[2026-09-27 13:52:32] [INFO] [SURGICAL-REPAIR] Pass@k evaluation: 0/10 candidates passed
+[2026-09-27 13:52:32] [INFO] [SURGICAL-REPAIR]   Stage 1 (AST): 0/10 passed
+[2026-09-27 13:52:32] [INFO] [SURGICAL-REPAIR]   Stage 2 (Exec): 0/10 passed
+[2026-09-27 13:52:32] [INFO] [SURGICAL-REPAIR]   Pass@k: {1: 0.0, 5: 0.0, 10: 0.0}
+[2026-09-27 13:52:32] [INFO] [SURGICAL-REPAIR] 
+Test case 2/3
+[2026-09-27 13:57:20] [INFO] [SURGICAL-REPAIR] Pass@k evaluation: 0/10 candidates passed
+[2026-09-27 13:57:20] [INFO] [SURGICAL-REPAIR]   Stage 1 (AST): 0/10 passed
+[2026-09-27 13:57:20] [INFO] [SURGICAL-REPAIR]   Stage 2 (Exec): 0/10 passed
+[2026-09-27 13:57:20] [INFO] [SURGICAL-REPAIR]   Pass@k: {1: 0.0, 5: 0.0, 10: 0.0}
+[2026-09-27 13:57:20] [INFO] [SURGICAL-REPAIR] 
+Test case 3/3
+[2026-09-27 13:58:40] [INFO] [SURGICAL-REPAIR] Pass@k evaluation: 0/10 candidates passed
+[2026-09-27 13:58:40] [INFO] [SURGICAL-REPAIR]   Stage 1 (AST): 0/10 passed
+[2026-09-27 13:58:40] [INFO] [SURGICAL-REPAIR]   Stage 2 (Exec): 0/10 passed
+[2026-09-27 13:58:40] [INFO] [SURGICAL-REPAIR]   Pass@k: {1: 0.0, 5: 0.0, 10: 0.0}
+[2026-09-27 13:58:40] [INFO] [SURGICAL-REPAIR] 
+Average Pass@k across all test cases: {1: 0.0, 5: 0.0, 10: 0.0}
+[2026-09-27 13:58:40] [INFO] [SURGICAL-REPAIR] 
+======================================================================
+[2026-09-27 13:58:40] [INFO] [SURGICAL-REPAIR] PIPELINE COMPLETE. Total time: 2.89 hours
+[2026-09-27 13:58:40] [INFO] [SURGICAL-REPAIR] ======================================================================

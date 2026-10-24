@@ -1,0 +1,277 @@
+{
+  "config": {
+    "model": "./surgical_repair_v2",
+    "num_candidates": 5,
+    "temperature": 0.4
+  },
+  "overall": {
+    "cases_with_s1_pass": 16,
+    "cases_with_s2_pass": 13,
+    "cases_with_exact_match": 13,
+    "avg_pass_at_1": 0.4076923076923077,
+    "avg_pass_at_5": 0.5,
+    "total_cases": 26
+  },
+  "per_case": [
+    {
+      "name": "add_fix",
+      "category": "arithmetic",
+      "s1_pass": 5,
+      "s2_pass": 5,
+      "exact_match": 5,
+      "pass@1": 1.0,
+      "pass@5": 1.0,
+      "seconds": 64.87349343299866
+    },
+    {
+      "name": "sub_fix",
+      "category": "arithmetic",
+      "s1_pass": 5,
+      "s2_pass": 5,
+      "exact_match": 5,
+      "pass@1": 1.0,
+      "pass@5": 1.0,
+      "seconds": 65.14335942268372
+    },
+    {
+      "name": "mul_fix",
+      "category": "arithmetic",
+      "s1_pass": 5,
+      "s2_pass": 5,
+      "exact_match": 5,
+      "pass@1": 1.0,
+      "pass@5": 1.0,
+      "seconds": 65.49278545379639
+    },
+    {
+      "name": "div_fix",
+      "category": "arithmetic",
+      "s1_pass": 5,
+      "s2_pass": 5,
+      "exact_match": 5,
+      "pass@1": 1.0,
+      "pass@5": 1.0,
+      "seconds": 62.41604280471802
+    },
+    {
+      "name": "mod_fix",
+      "category": "arithmetic",
+      "s1_pass": 5,
+      "s2_pass": 5,
+      "exact_match": 5,
+      "pass@1": 1.0,
+      "pass@5": 1.0,
+      "seconds": 66.88411450386047
+    },
+    {
+      "name": "pow_fix",
+      "category": "arithmetic",
+      "s1_pass": 5,
+      "s2_pass": 5,
+      "exact_match": 5,
+      "pass@1": 1.0,
+      "pass@5": 1.0,
+      "seconds": 53.308738231658936
+    },
+    {
+      "name": "factorial_base",
+      "category": "base_case",
+      "s1_pass": 0,
+      "s2_pass": 0,
+      "exact_match": 0,
+      "pass@1": 0.0,
+      "pass@5": 0.0,
+      "seconds": 68.78202247619629
+    },
+    {
+      "name": "max_of_two",
+      "category": "comparison",
+      "s1_pass": 0,
+      "s2_pass": 0,
+      "exact_match": 0,
+      "pass@1": 0.0,
+      "pass@5": 0.0,
+      "seconds": 67.36444520950317
+    },
+    {
+      "name": "min_of_two",
+      "category": "comparison",
+      "s1_pass": 0,
+      "s2_pass": 0,
+      "exact_match": 0,
+      "pass@1": 0.0,
+      "pass@5": 0.0,
+      "seconds": 56.33126401901245
+    },
+    {
+      "name": "is_even",
+      "category": "parity",
+      "s1_pass": 1,
+      "s2_pass": 1,
+      "exact_match": 1,
+      "pass@1": 0.19999999999999996,
+      "pass@5": 1.0,
+      "seconds": 55.187297105789185
+    },
+    {
+      "name": "is_odd",
+      "category": "parity",
+      "s1_pass": 3,
+      "s2_pass": 3,
+      "exact_match": 3,
+      "pass@1": 0.6,
+      "pass@5": 1.0,
+      "seconds": 62.96190023422241
+    },
+    {
+      "name": "abs_val",
+      "category": "arithmetic",
+      "s1_pass": 0,
+      "s2_pass": 0,
+      "exact_match": 0,
+      "pass@1": 0.0,
+      "pass@5": 0.0,
+      "seconds": 66.71295809745789
+    },
+    {
+      "name": "negate",
+      "category": "arithmetic",
+      "s1_pass": 5,
+      "s2_pass": 5,
+      "exact_match": 5,
+      "pass@1": 1.0,
+      "pass@5": 1.0,
+      "seconds": 15.015960454940796
+    },
+    {
+      "name": "inc",
+      "category": "off_by_one",
+      "s1_pass": 2,
+      "s2_pass": 2,
+      "exact_match": 2,
+      "pass@1": 0.4,
+      "pass@5": 1.0,
+      "seconds": 68.25550651550293
+    },
+    {
+      "name": "dec",
+      "category": "off_by_one",
+      "s1_pass": 5,
+      "s2_pass": 5,
+      "exact_match": 5,
+      "pass@1": 1.0,
+      "pass@5": 1.0,
+      "seconds": 69.76525974273682
+    },
+    {
+      "name": "first_elem",
+      "category": "list",
+      "s1_pass": 0,
+      "s2_pass": 0,
+      "exact_match": 0,
+      "pass@1": 0.0,
+      "pass@5": 0.0,
+      "seconds": 65.3003101348877
+    },
+    {
+      "name": "last_elem",
+      "category": "list",
+      "s1_pass": 0,
+      "s2_pass": 0,
+      "exact_match": 0,
+      "pass@1": 0.0,
+      "pass@5": 0.0,
+      "seconds": 60.83873438835144
+    },
+    {
+      "name": "list_size",
+      "category": "list",
+      "s1_pass": 0,
+      "s2_pass": 0,
+      "exact_match": 0,
+      "pass@1": 0.0,
+      "pass@5": 0.0,
+      "seconds": 56.467041015625
+    },
+    {
+      "name": "upper_fix",
+      "category": "string",
+      "s1_pass": 0,
+      "s2_pass": 0,
+      "exact_match": 0,
+      "pass@1": 0.0,
+      "pass@5": 0.0,
+      "seconds": 58.27845072746277
+    },
+    {
+      "name": "lower_fix",
+      "category": "string",
+      "s1_pass": 1,
+      "s2_pass": 0,
+      "exact_match": 0,
+      "pass@1": 0.0,
+      "pass@5": 0.0,
+      "seconds": 54.22937345504761
+    },
+    {
+      "name": "always_true",
+      "category": "boolean",
+      "s1_pass": 5,
+      "s2_pass": 5,
+      "exact_match": 5,
+      "pass@1": 1.0,
+      "pass@5": 1.0,
+      "seconds": 57.63125705718994
+    },
+    {
+      "name": "always_false",
+      "category": "boolean",
+      "s1_pass": 4,
+      "s2_pass": 0,
+      "exact_match": 0,
+      "pass@1": 0.0,
+      "pass@5": 0.0,
+      "seconds": 54.575541496276855
+    },
+    {
+      "name": "swap_gt",
+      "category": "ood_comparison",
+      "s1_pass": 2,
+      "s2_pass": 2,
+      "exact_match": 2,
+      "pass@1": 0.4,
+      "pass@5": 1.0,
+      "seconds": 52.375563621520996
+    },
+    {
+      "name": "fib_base",
+      "category": "ood_base_case",
+      "s1_pass": 0,
+      "s2_pass": 0,
+      "exact_match": 0,
+      "pass@1": 0.0,
+      "pass@5": 0.0,
+      "seconds": 59.56053853034973
+    },
+    {
+      "name": "drop_first",
+      "category": "ood_list",
+      "s1_pass": 3,
+      "s2_pass": 0,
+      "exact_match": 0,
+      "pass@1": 0.0,
+      "pass@5": 0.0,
+      "seconds": 80.65826988220215
+    },
+    {
+      "name": "trim_left",
+      "category": "ood_string",
+      "s1_pass": 0,
+      "s2_pass": 0,
+      "exact_match": 0,
+      "pass@1": 0.0,
+      "pass@5": 0.0,
+      "seconds": 68.41844248771667
+    }
+  ]
+}
